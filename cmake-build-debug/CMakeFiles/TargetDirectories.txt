@@ -1,0 +1,3 @@
+C:/Users/poper/Downloads/programming 22/programming/adc_sensor/cmake-build-debug/CMakeFiles/adc_sensor.dir
+C:/Users/poper/Downloads/programming 22/programming/adc_sensor/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/poper/Downloads/programming 22/programming/adc_sensor/cmake-build-debug/CMakeFiles/rebuild_cache.dir
