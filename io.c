@@ -3,3 +3,8 @@
 //
 
 #include "io.h"
+
+#include <stdio.h>
+
+ADCsample * readBinData(Header * h) {
+}

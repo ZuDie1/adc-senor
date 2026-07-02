@@ -1,6 +1,7 @@
 #include <stdio.h>
 
+#include "io.h"
 int main(void) {
-    printf("Hello, World!\n");
+    Header header;
     return 0;
 }

@@ -1,3 +1,16 @@
 # ninja log v6
 3	93	8045604097732636	CMakeFiles/adc_sensor.dir/main.c.obj	79229fab9a23756c
 94	240	8045604098632427	adc_sensor.exe	32c3399442c85588
+55	231	8047017051430440	CMakeFiles/adc_sensor.dir/io.c.obj	cc6e78f3b2ccd886
+65	232	8047017051514589	CMakeFiles/adc_sensor.dir/stats.c.obj	9f1cbb32ca0ea996
+60	232	8047017051466670	CMakeFiles/adc_sensor.dir/adc.c.obj	1fe96edbaf7eee69
+48	266	8047017051352262	CMakeFiles/adc_sensor.dir/main.c.obj	79229fab9a23756c
+266	535	8047017053542817	adc_sensor.exe	b78742bd34857654
+9	90	8047018696286465	CMakeFiles/adc_sensor.dir/io.c.obj	cc6e78f3b2ccd886
+3	97	8047018696230207	CMakeFiles/adc_sensor.dir/main.c.obj	79229fab9a23756c
+97	202	8047018697171189	adc_sensor.exe	b78742bd34857654
+4	77	8047019289069217	CMakeFiles/adc_sensor.dir/main.c.obj	79229fab9a23756c
+10	83	8047019289128711	CMakeFiles/adc_sensor.dir/io.c.obj	cc6e78f3b2ccd886
+83	177	8047019289869321	adc_sensor.exe	b78742bd34857654
+4	81	8047019794650926	CMakeFiles/adc_sensor.dir/main.c.obj	79229fab9a23756c
+82	182	8047019795429947	adc_sensor.exe	b78742bd34857654
