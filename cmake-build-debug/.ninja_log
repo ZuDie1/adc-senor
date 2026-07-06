@@ -45,3 +45,10 @@
 105	203	8048960919371648	adc_sensor.exe	b78742bd34857654
 4	125	8048961171035825	CMakeFiles/adc_sensor.dir/io.c.obj	cc6e78f3b2ccd886
 126	249	8048961172255274	adc_sensor.exe	b78742bd34857654
+62	299	8050696253679247	CMakeFiles/adc_sensor.dir/io.c.obj	cc6e78f3b2ccd886
+48	301	8050696253538873	CMakeFiles/adc_sensor.dir/main.c.obj	79229fab9a23756c
+70	302	8050696253743679	CMakeFiles/adc_sensor.dir/adc.c.obj	1fe96edbaf7eee69
+302	573	8050696256077634	adc_sensor.exe	b78742bd34857654
+4	85	8050697942258693	CMakeFiles/adc_sensor.dir/main.c.obj	79229fab9a23756c
+11	95	8050697942331337	CMakeFiles/adc_sensor.dir/io.c.obj	cc6e78f3b2ccd886
+95	201	8050697943162963	adc_sensor.exe	b78742bd34857654

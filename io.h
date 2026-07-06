@@ -6,7 +6,7 @@
 #define IO_H
 
 #include <stdint.h>
-typedef struct { //24 byte 192
+typedef struct __attribute__((__packed__)) { //24 byte 192
     uint32_t magic;
     uint16_t version;
     uint16_t channel_count;
@@ -24,6 +24,8 @@ typedef struct __attribute__((__packed__)) { //16 byte --128 padding
     uint32_t sequence_number;
     uint8_t reserved[2];
 }ADCsample;
+
+
 
 ADCsample * readBinData(char * filename , Header * h);
 void printHeaderFile(Header * header);
