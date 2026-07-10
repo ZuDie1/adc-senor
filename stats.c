@@ -39,15 +39,20 @@ void getStatistics(ADCsample * samples , Header header , VoltageSamples * vsampl
     stat[2].mean_voltage=sum_voltages[2]/voltage_count_per_channel[2];
     stat[3].mean_voltage=sum_voltages[3]/voltage_count_per_channel[3];
 
-   //std dev :
+    getStdDev(samples,header,vsamples,stat,voltage_count_per_channel);
+
+}
+
+void getStdDev(ADCsample * samples , Header header , VoltageSamples * vsamples , StatisticsChannel stat[4],int voltage_count_per_channel[4]) {
+    //std dev :
     //1- we get the variance : current voltage
     float total_diff_squares[4];
     for ( uint32_t i=0 ; i < header.sampleCount ; i++) {
         uint8_t current_channel = (samples+i)->channel_id; //0 ,1 , 2 ,3
         //variance :
         float volt_difference = vsamples[i].voltage - stat[current_channel].mean_voltage;
-        float diff_squeares = volt_difference * volt_difference;
-        total_diff_squares[current_channel] = total_diff_squares[current_channel]+diff_squeares;
+        float diff_squares = volt_difference * volt_difference;
+        total_diff_squares[current_channel] = total_diff_squares[current_channel]+diff_squares;
     }
     //std
     stat[0].stdDev=total_diff_squares[0]/voltage_count_per_channel[0];
