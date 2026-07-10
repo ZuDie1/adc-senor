@@ -20,7 +20,14 @@ typedef struct {
     int under_voltage;// <0.3
     int sensor_flag;// 0x01
 }FaultSamples;
+
+typedef  struct {
+    int missing_seq;
+    int out_of_order_seq;
+}SequenceIntegrity;
+
 void getStatistics(ADCsample * samples , Header header , VoltageSamples * vsamples , StatisticsChannel stat[4]);
-void getStdDev(ADCsample * samples , Header header , VoltageSamples * vsamples , StatisticsChannel stat[4] , int voltage_count_per_channel[4]);
+void getStdDev(ADCsample * samples , Header header , VoltageSamples * vsamples , StatisticsChannel stat[4]);
 void getFaultsData(ADCsample * samples , Header header , VoltageSamples * vsamples , FaultSamples fautls[4]);
+void getSequenceIntegrity(ADCsample * samples , Header header  , SequenceIntegrity * sequence);
 #endif //STATS_H
