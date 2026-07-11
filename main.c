@@ -2,8 +2,9 @@
 
 #include "adc.h"
 #include "io.h"
+#include "report.h"
 #include "stats.h"
-
+#include <stdlib.h>
 int main(void) {
     Header header;
     ADCsample * samples = readBinData("adc_sensor_log.bin",&header);
@@ -31,6 +32,8 @@ int main(void) {
     printf("Out of order seq : %d \n",SequenceIntegrity.out_of_order_seq);
     printf("Missing seq : %d \n",SequenceIntegrity.missing_seq);
 
-   //GenerateResult_File("result.text",statistics_channel,fault_samples,SequenceIntegrity);
+   GenerateResult_File("result.text",statistics_channel,fault_samples,SequenceIntegrity);
+
+    free(samples);
     return 0;
 }

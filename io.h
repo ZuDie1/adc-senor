@@ -32,5 +32,4 @@ void PrintSamples(ADCsample * samples , Header * h);
 
 
 
-//void GenerateResult_File (char * filename ,StatisticsChannel stat[4],FaultSamples fault[4],SequenceIntegrity seq );
 #endif //IO_H

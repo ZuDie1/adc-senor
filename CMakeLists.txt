@@ -9,4 +9,5 @@ add_executable(adc_sensor main.c
         adc.c
         adc.h
         stats.c
-        stats.h)
+        stats.h
+        report.h)

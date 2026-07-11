@@ -3,7 +3,7 @@
 //
 
 #include "stats.h"
-
+#include "math.h"
 void getStatistics(ADCsample * samples , Header header , VoltageSamples * vsamples , StatisticsChannel stat[4]) {
 
     for(uint32_t i=0 ; i< 4; i++) {
@@ -57,10 +57,17 @@ void getStdDev(ADCsample * samples , Header header , VoltageSamples * vsamples ,
         voltage_count_per_channel[current_channel]++;
     }
     //std
-    stat[0].stdDev=total_diff_squares[0]/voltage_count_per_channel[0];
-    stat[1].stdDev=total_diff_squares[1]/voltage_count_per_channel[1];
-    stat[2].stdDev=total_diff_squares[2]/voltage_count_per_channel[2];
-    stat[3].stdDev=total_diff_squares[3]/voltage_count_per_channel[3];
+       float var_ch0=total_diff_squares[0]/voltage_count_per_channel[0];
+       float var_ch1=total_diff_squares[1]/voltage_count_per_channel[1];
+       float var_ch2=total_diff_squares[2]/voltage_count_per_channel[2];
+       float var_ch3=total_diff_squares[3]/voltage_count_per_channel[3];
+
+    stat[0].stdDev=sqrt(var_ch0);
+    stat[1].stdDev=sqrt(var_ch1);
+    stat[2].stdDev=sqrt(var_ch2);
+    stat[3].stdDev=sqrt(var_ch3);
+
+
 }
 void getFaultsData(ADCsample * samples , Header header , VoltageSamples * vsamples , FaultSamples fautls[4]) {
     for(uint32_t i=0 ; i< 4; i++) {

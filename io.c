@@ -6,7 +6,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "stats.h"
+#include "report.h"
 ADCsample * readBinData(char * filename , Header * h)
 {
    FILE * binaryFile ;
@@ -58,7 +59,7 @@ void PrintSamples(ADCsample * samples,Header *h) {
          samples[i].status_flags , samples[i].sequence_number);
    }
 }
-/*
+
 void GenerateResult_File (char * filename ,StatisticsChannel stat[4],FaultSamples fault[4],SequenceIntegrity seq ) {
    FILE * resultFile ;
    resultFile=fopen(filename,"w");
@@ -83,4 +84,4 @@ void GenerateResult_File (char * filename ,StatisticsChannel stat[4],FaultSample
 
    }
    fclose(resultFile);
-}*/
+}
