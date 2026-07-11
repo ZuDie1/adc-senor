@@ -26,7 +26,11 @@ int main(void) {
     printf("Channel 0 faults : \n OverVoltages count : %d \n UnderVoltages count : %d \n Sensor fault count : %d \n",
         fault_samples[0].over_voltage , fault_samples[0].under_voltage ,fault_samples[0].sensor_flag);
 
+    SequenceIntegrity  SequenceIntegrity;
+    getSequenceIntegrity (samples,header,&SequenceIntegrity);
+    printf("Out of order seq : %d \n",SequenceIntegrity.out_of_order_seq);
+    printf("Missing seq : %d \n",SequenceIntegrity.missing_seq);
 
-
+   //GenerateResult_File("result.text",statistics_channel,fault_samples,SequenceIntegrity);
     return 0;
 }

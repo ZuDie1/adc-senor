@@ -58,3 +58,29 @@ void PrintSamples(ADCsample * samples,Header *h) {
          samples[i].status_flags , samples[i].sequence_number);
    }
 }
+/*
+void GenerateResult_File (char * filename ,StatisticsChannel stat[4],FaultSamples fault[4],SequenceIntegrity seq ) {
+   FILE * resultFile ;
+   resultFile=fopen(filename,"w");
+   //validate file ,
+
+   if (resultFile== NULL) {
+      printf("there was a problem with the file name : %s    try again with different name \n",filename);
+   }
+
+   fprintf(resultFile,"Result file as follow : \n\n");
+
+   for (int i =0 ; i < 4 ; i++) {
+      fprintf(resultFile,"Channel %d Min Voltage value : %f \n" ,i,stat[i].min);
+      fprintf(resultFile,"Channel %d Max Voltage value : %f \n" ,i,stat[i].max);
+      fprintf(resultFile,"Channel %d Mean Voltage value : %f \n" ,i,stat[i].mean_voltage);
+      fprintf(resultFile,"Channel %d Standar dev value : %f \n" ,i,stat[i].stdDev);
+      fprintf(resultFile,"Channel %d Sensor faults : %d \n" ,i,fault[i].sensor_flag);
+      fprintf(resultFile,"Channel %d OverVoltages faults : %d \n" ,i,fault[i].over_voltage);
+      fprintf(resultFile,"Channel %d UnderVoltages faults : %d \n" ,i,fault[i].under_voltage);
+         fprintf(resultFile,"****************************************************** \n");
+         fprintf(resultFile,"****************************************************** \n");
+
+   }
+   fclose(resultFile);
+}*/

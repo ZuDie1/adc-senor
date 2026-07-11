@@ -5,7 +5,6 @@
 #ifndef STATS_H
 #define STATS_H
 #include "adc.h"
-#include "io.h"
 
 //mean , min , max , stdDev for each channel ( VOLTAGES )
 typedef struct {

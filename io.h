@@ -4,7 +4,6 @@
 
 #ifndef IO_H
 #define IO_H
-
 #include <stdint.h>
 typedef struct __attribute__((__packed__)) { //24 byte 192
     uint32_t magic;
@@ -31,4 +30,7 @@ ADCsample * readBinData(char * filename , Header * h);
 void printHeaderFile(Header * header);
 void PrintSamples(ADCsample * samples , Header * h);
 
+
+
+//void GenerateResult_File (char * filename ,StatisticsChannel stat[4],FaultSamples fault[4],SequenceIntegrity seq );
 #endif //IO_H
