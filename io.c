@@ -36,13 +36,21 @@ ADCsample * readBinData(char * filename , Header * h)
 
    //read the records
    ADCsample * samples = malloc(h->sampleCount * sizeof(ADCsample) );
+   if(samples ==NULL) {
+      printf("Error allocting samples in the memory ");
+      return NULL;
 
-   fread(samples,sizeof(ADCsample) , h->sampleCount ,binaryFile);
+   }
 
-   PrintSamples(samples,h);
+      fread(samples,sizeof(ADCsample) , h->sampleCount ,binaryFile);
 
-   fclose(binaryFile);
-   return samples;
+      PrintSamples(samples,h);
+
+      fclose(binaryFile);
+      return samples;
+
+
+
 }
 
 void printHeaderFile(Header * header) {

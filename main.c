@@ -9,6 +9,10 @@ int main(void) {
     Header header;
     ADCsample * samples = readBinData("adc_sensor_log.bin",&header);
     VoltageSamples * vsamples=ConvertAdcRawToVoltages(samples,header);
+    if( samples == NULL || vsamples ==NULL) {
+        printf("Error reading adc_sensor_log.bin");
+        return -1;
+    }
     for(uint32_t i =0 ; i < header.sampleCount ; i ++) {
         printf("Rec : %u           Voltage :  %f \n" , i , vsamples[i].voltage);
     }
@@ -35,5 +39,6 @@ int main(void) {
    GenerateResult_File("result.text",statistics_channel,fault_samples,SequenceIntegrity);
 
     free(samples);
+    free(vsamples);
     return 0;
 }
